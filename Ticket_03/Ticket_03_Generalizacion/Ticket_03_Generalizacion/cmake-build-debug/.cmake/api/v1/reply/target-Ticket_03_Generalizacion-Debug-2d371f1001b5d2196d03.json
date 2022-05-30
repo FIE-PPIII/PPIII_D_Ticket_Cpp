@@ -70,7 +70,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				2
+				2,
+				4,
+				6
 			]
 		}
 	],
@@ -108,14 +110,18 @@
 			"sourceIndexes" : 
 			[
 				0,
-				2
+				2,
+				4,
+				6
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				3,
+				5
 			]
 		}
 	],
@@ -136,6 +142,28 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Ticket_03_Generalizacion.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Lib/Lib_Hora/Lib_Hora_Generalizacion/Hora.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Lib/Lib_Hora/Lib_Hora_Generalizacion/Hora.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Lib/Lib_Fecha/Lib_Fecha_Generalizacion/Fecha.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Lib/Lib_Fecha/Lib_Fecha_Generalizacion/Fecha.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

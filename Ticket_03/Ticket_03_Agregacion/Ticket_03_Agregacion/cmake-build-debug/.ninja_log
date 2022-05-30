@@ -1,3 +1,6 @@
 # ninja log v5
 1	798	6756508033239425	CMakeFiles/Ticket_03_Agregacion.dir/Ticket.cpp.obj	c94612ca89c4edd8
 13	870	6756508034027935	CMakeFiles/Ticket_03_Agregacion.dir/Ticket_03_Agregacion.cpp.obj	58686acb158e844e
+6	759	6756525382399384	CMakeFiles/Ticket_03_Agregacion.dir/4743b8ba378ee75f6f1db34443a9a5d0/Lib_Fecha/Lib_Fecha_Agregacion/Fecha.cpp.obj	9c01d2f0ba7c1792
+19	769	6756525382597140	CMakeFiles/Ticket_03_Agregacion.dir/68f47a921cf43011b8d33523d1c00c47/Lib/Lib_Hora/Lib_Hora_Agregacion/Hora.cpp.obj	71aff0841ec290fa
+770	951	6756525384348924	Ticket_03_Agregacion.exe	e66620d146b0414f
