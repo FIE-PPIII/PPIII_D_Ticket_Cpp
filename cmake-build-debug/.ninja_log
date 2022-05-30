@@ -1,0 +1,5 @@
+# ninja log v5
+1	515	6756499833607859	CMakeFiles/base_cpp.dir/main.cpp.obj	bd81424c00ca9613
+518	716	6756499835511021	base_cpp.exe	a6868f942d72195
+28	485	6756501330502704	CMakeFiles/base_cpp.dir/Ticket_01/Ticket_01/Ticket_01.cpp.obj	ede96c83f2e676ea
+6	602	6756501331705048	CMakeFiles/base_cpp.dir/Ticket_01/Ticket_01/Ticket.cpp.obj	2b11aa6acaf1a82

@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Ticket_04_Poli_Agre",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Ticket_04_Poli_Agre::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ticket_04_Poli_Agre-Debug-672d18d53a4ae5fd6cdf.json",
+					"name" : "Ticket_04_Poli_Agre",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_04/Ticket_04_Poli_Agre/Ticket_04_Poli_Agre/cmake-build-debug",
+		"source" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_04/Ticket_04_Poli_Agre/Ticket_04_Poli_Agre"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

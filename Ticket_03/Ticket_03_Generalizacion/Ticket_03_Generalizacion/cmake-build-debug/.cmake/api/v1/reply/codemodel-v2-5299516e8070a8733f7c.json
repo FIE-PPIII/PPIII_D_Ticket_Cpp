@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Ticket_03_Generalizacion",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Ticket_03_Generalizacion::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ticket_03_Generalizacion-Debug-9475ff240e436b57844e.json",
+					"name" : "Ticket_03_Generalizacion",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_03/Ticket_03_Generalizacion/Ticket_03_Generalizacion/cmake-build-debug",
+		"source" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_03/Ticket_03_Generalizacion/Ticket_03_Generalizacion"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

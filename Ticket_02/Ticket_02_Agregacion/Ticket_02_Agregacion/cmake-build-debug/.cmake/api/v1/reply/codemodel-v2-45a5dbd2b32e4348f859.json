@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Ticket_02_Agregacion",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Ticket_02_Agregacion::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ticket_02_Agregacion-Debug-3f4656d6beeba040f917.json",
+					"name" : "Ticket_02_Agregacion",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_02/Ticket_02_Agregacion/Ticket_02_Agregacion/cmake-build-debug",
+		"source" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_02/Ticket_02_Agregacion/Ticket_02_Agregacion"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
