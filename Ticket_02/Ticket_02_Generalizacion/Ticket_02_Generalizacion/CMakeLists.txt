@@ -8,4 +8,6 @@ include_directories(.)
 add_executable(Ticket_02_Generalizacion
         Ticket.cpp
         Ticket.h
-        Ticket_02_Generalizacion.cpp)
+        Ticket_02_Generalizacion.cpp
+        ../../../Lib/Lib_Fecha/Lib_Fecha_Generalizacion/Fecha.h
+        ../../../Lib/Lib_Fecha/Lib_Fecha_Generalizacion/Fecha.cpp)
