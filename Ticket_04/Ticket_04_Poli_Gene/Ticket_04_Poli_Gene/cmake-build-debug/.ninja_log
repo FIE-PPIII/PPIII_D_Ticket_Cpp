@@ -1,3 +1,6 @@
 # ninja log v5
 1	1070	6756509056739831	CMakeFiles/Ticket_04_Poli_Gene.dir/Ticket.cpp.obj	32fd5de9aa8f9b6c
 15	1083	6756509057266201	CMakeFiles/Ticket_04_Poli_Gene.dir/Ticket_04_Poli_Gene.cpp.obj	992fbc7bae9949a9
+8	600	6756529041660703	CMakeFiles/Ticket_04_Poli_Gene.dir/68f47a921cf43011b8d33523d1c00c47/Lib/Lib_Hora/Lib_Hora_Poli_Gene/Hora.cpp.obj	f4e0aaf5c4e4523c
+10	486	6756529534160689	CMakeFiles/Ticket_04_Poli_Gene.dir/4743b8ba378ee75f6f1db34443a9a5d0/Lib_Fecha/Lib_Fecha_Polimorfismo/Fecha.cpp.obj	c7c0236072f0dceb
+487	673	6756529535961659	Ticket_04_Poli_Gene.exe	c4644dd382da81a9

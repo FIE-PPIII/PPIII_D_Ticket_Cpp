@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Ticket_04_Poli_Agre",
+					"name" : "Ticket_04_Poli_Gene",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Ticket_04_Poli_Agre::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Ticket_04_Poli_Agre-Debug-672d18d53a4ae5fd6cdf.json",
-					"name" : "Ticket_04_Poli_Agre",
+					"id" : "Ticket_04_Poli_Gene::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ticket_04_Poli_Gene-Debug-a7bc998977a360bb09e8.json",
+					"name" : "Ticket_04_Poli_Gene",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_04/Ticket_04_Poli_Agre/Ticket_04_Poli_Agre/cmake-build-debug",
-		"source" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_04/Ticket_04_Poli_Agre/Ticket_04_Poli_Agre"
+		"build" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_04/Ticket_04_Poli_Gene/Ticket_04_Poli_Gene/cmake-build-debug",
+		"source" : "C:/Users/Usuario/FIE/Practica Paradigmas III/PPIII_D_Ticket_Cpp/Ticket_04/Ticket_04_Poli_Gene/Ticket_04_Poli_Gene"
 	},
 	"version" : 
 	{
