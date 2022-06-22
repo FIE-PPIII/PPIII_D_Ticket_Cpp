@@ -4,22 +4,10 @@
 
 using namespace std;
 
-// Constructor
-Hora::Hora() : Fecha()
-{}
+//-----------------
+// Servicio Privado
+//-----------------
 
-Hora::Hora(const int dd, const int mm, const int aaaa, const int hh, const int mi, const int ss) : Fecha (dd, mm, aaaa)
-{
-    this->hh = hh;
-    this->mi = mi;
-    this->ss = ss;
-}
-
-// Destructor
-Hora::~Hora()
-{}
-
-// Servicio Interno
 int Hora::ProcesarCompararHora(const int hh, const int mi, const int ss) const
 {
     if (this->hh < hh)
@@ -55,7 +43,31 @@ int Hora::ProcesarCompararHora(const int hh, const int mi, const int ss) const
     return 0;
 }
 
-// Servicio
+//--------------------
+// Constructor Publico
+//--------------------
+
+Hora::Hora() : Fecha()
+{}
+
+Hora::Hora(const int dd, const int mm, const int aaaa, const int hh, const int mi, const int ss) : Fecha (dd, mm, aaaa)
+{
+    this->hh = hh;
+    this->mi = mi;
+    this->ss = ss;
+}
+
+//-------------------
+// Destructor Publico
+//-------------------
+
+Hora::~Hora()
+{}
+
+//-----------------
+// Servicio Publico
+//-----------------
+
 int Hora::CompararHora(const int hh, const int mi, const int ss) const
 {
     return this->ProcesarCompararHora(hh, mi, ss);
@@ -88,9 +100,7 @@ int Hora::Validar()
 
 void Hora::Mostrar()
 {
-	Fecha * fecha = (Fecha *) this;
-
-	(*fecha).Fecha::Mostrar();
+	Fecha::Mostrar();
 
     cout << "Hora: " << this->hh << ":" << this->mi << ":" << this->ss << endl << flush;
 
@@ -101,12 +111,9 @@ void Hora::Mostrar(const string mensaje)
 {
 	cout << mensaje << endl << flush;
 
-	Fecha * fecha = (Fecha *) this;
-
-	(*fecha).Fecha::Mostrar();
+	Fecha::Mostrar();
 
     cout << "Hora: " << this->hh << ":" << this->mi << ":" << this->ss << endl << flush;
 
     return;
 }
-

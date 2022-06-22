@@ -7,11 +7,8 @@
 int main(int argc, char** argv) 
 {
 	int estado;
+
 	Ticket ticketUno("563978032412042022");
-	Ticket ticketDos("983457203107052022");
-	Ticket ticketTres;
-	
-	ticketTres.AsignarDatos("378134231123062022");
 
 	ticketUno.MostrarDatos("\nDatos del ticket Uno");
 
@@ -19,21 +16,31 @@ int main(int argc, char** argv)
 
     if (estado == -1)
     {
+		cout << "Presione ENTER" << endl << flush;
+
         system("pause");
 
         return -1;
     }
 
+	Ticket ticketDos("983457203107052022");
+
     ticketDos.MostrarDatos("\nDatos del ticket Dos");
-    
+
     estado = ticketDos.ValidarDatos();
 
     if (estado == -1)
     {
+		cout << "Presione ENTER" << endl << flush;
+
         system("pause");
 
         return -1;
     }
+
+	Ticket ticketTres;
+
+	ticketTres.AsignarDatos("378134231123062022");
 
     ticketTres.MostrarDatos("\nDatos del ticket Tres");
 
@@ -41,13 +48,16 @@ int main(int argc, char** argv)
 
     if (estado == -1)
     {
+		cout << "Presione ENTER" << endl << flush;
+
         system("pause");
 
         return(estado);
     }
 
     cout << "\nCompara los tres atributos de la primera fecha y envio como parametros los tres atributos de segunda fecha" << endl << flush;
-    estado = ticketUno.ObtenerFecha()->CompararFecha(ticketDos.ObtenerFecha()->ObtenerDD(), ticketDos.ObtenerFecha()->ObtenerMM(), ticketDos.ObtenerFecha()->ObtenerAAAA());
+
+	estado = ticketUno.ObtenerFecha()->CompararFecha(ticketDos.ObtenerFecha()->ObtenerDD(), ticketDos.ObtenerFecha()->ObtenerMM(), ticketDos.ObtenerFecha()->ObtenerAAAA());
 
     if (estado == 1)
     {
@@ -66,7 +76,8 @@ int main(int argc, char** argv)
     }
 
     cout << "\nCompara los tres atributos de la primera fecha y envio como parametro la tercera fecha" << endl << flush;
-    estado = ticketUno.ObtenerFecha()->CompararFecha(*(ticketTres.ObtenerFecha()));
+
+	estado = ticketUno.ObtenerFecha()->CompararFecha(*(ticketTres.ObtenerFecha()));
 
     if (estado == 1)
     {
@@ -85,7 +96,8 @@ int main(int argc, char** argv)
     }
 
     cout << "\nCompara los tres atributos de la segunda fecha y envio como parametro la tercera fecha" << endl << flush;
-    estado = ticketDos.ObtenerFecha()->CompararFecha(*(ticketTres.ObtenerFecha()));
+
+	estado = ticketDos.ObtenerFecha()->CompararFecha(*(ticketTres.ObtenerFecha()));
 
     if (estado == 1)
     {
@@ -102,9 +114,10 @@ int main(int argc, char** argv)
             cout << "La segunda " << ticketDos.ObtenerFecha()->ObtenerDD() << "/" << ticketDos.ObtenerFecha()->ObtenerMM() << "/" << ticketDos.ObtenerFecha()->ObtenerAAAA() << " es igual a la tercera " << ticketTres.ObtenerFecha()->ObtenerDD() << "/" << ticketTres.ObtenerFecha()->ObtenerMM() << "/" << ticketTres.ObtenerFecha()->ObtenerAAAA() << endl << flush;
         }
     }
-            
-    system("pause");
+
+	cout << "Presione ENTER" << endl << flush;
+
+	system("pause");
 
 	return 0;
 }
-

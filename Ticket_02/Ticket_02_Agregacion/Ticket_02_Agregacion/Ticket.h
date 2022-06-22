@@ -3,59 +3,89 @@
 	#define __TICKET_H__
 
 	#include <string>
-	
+
 	#include "../../../Lib/Lib_Fecha/Lib_Fecha_Agregacion/Fecha.h"
-	
+
 	using namespace std;
 
 	class Ticket
 	{
+		private:
+
+			//-------------
+			// Dato Privado
+			//-------------
+
+			string datos;
+			string nro;
+			Fecha fecha;
+
+			//-----------------
+			// Servicio Privado
+			//-----------------
+
+			void ParsearDatos();
+
 		public:
-			// Constructor
+
+			//--------------------
+			// Constructor Publico
+			//--------------------
+
 			Ticket();
 			Ticket(const string);
-			
-			// Destructor
+
+			//-------------------
+			// Destructor Publico
+			//-------------------
+
 			~Ticket();
 
-			// Asignar Atributo
+			//-------------------------
+			// Asignar Atributo Publico
+			//-------------------------
+
 			void AsignarDatos(const string);
 
-			// Obtener Atributo
+			//-------------------------
+			// Obtener Atributo Publico
+			//-------------------------
+
 			string ObtenerDatos() const;
 			string ObtenerNro() const;
 			Fecha & ObtenerFecha();
 
-			// Servicio
+			//-----------------
+			// Servicio Publico
+			//-----------------
+
 			int ValidarDatos();
 			void MostrarDatos();
 			void MostrarDatos(const string);
-
-		private:
-			string datos;
-			string nro;
-			Fecha fecha;
-			
-			// Servicio Interno
-			void ParsearDatos();
 	};
 
-	// Asignar Atributo
+	//-------------------------
+	// Asignar Atributo Publico
+	//-------------------------
+
 	inline void Ticket::AsignarDatos(const string datos)
 	{
 		this->datos = datos;
-		
+
 		this->ParsearDatos();
-	
+
 		return;
 	}
 
-	// Obtener Atributo
+	//-------------------------
+	// Obtener Atributo Publico
+	//-------------------------
+
 	inline string Ticket::ObtenerDatos() const
 	{
 		return(this->datos);
 	}
-	
+
 	inline string Ticket::ObtenerNro() const
 	{
 		return(this->nro);

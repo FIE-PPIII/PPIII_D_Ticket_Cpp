@@ -1,50 +1,75 @@
 #ifndef __HORA_H__
 
 	#define __HORA_H__
-	
+
 	#include <string>
 
 	using namespace std;
-	
+
 	class Hora
 	{
+		private:
+
+			//-------------
+			// Dato Privado
+			//-------------
+
+			int hh;
+    		int mi;
+    		int ss;
+
+			//-----------------
+			// Servicio Privado
+			//-----------------
+
+    		int ProcesarCompararHora(const int, const int, const int) const;
+
 		public:
-			// Constructor
+
+			//--------------------
+			// Constructor Publico
+			//--------------------
+
 			Hora();
 			Hora(const int, const int, const int);
-			
-			// Destructor
+
+			//-------------------
+			// Destructor Publico
+			//-------------------
+
 			~Hora();
-			
-			// Asignar Atributo
+
+			//-------------------------
+			// Asignar Atributo Publico
+			//-------------------------
+
 			void AsignarHH(const int);
 			void AsignarMI(const int);
 			void AsignarSS(const int);
-			
-			// Obtener Atributo
+
+			//-------------------------
+			// Obtener Atributo Publico
+			//-------------------------
+
 			int ObtenerHH() const;
 			int ObtenerMI() const;
 			int ObtenerSS() const;
-		
-			// Servicio
+
+			//-----------------
+			// Servicio Publico
+			//-----------------
+
 			int CompararHora(const int, const int, const int) const;
 			int CompararHora(const Hora) const;
 			int ValidarHora() const;
 			void MostrarHora() const;
 			void MostrarHora(const string) const;
-		
-		private:
-			int hh;
-    		int mi;
-    		int ss;
-
-			// Servicio Interno
-    		int ProcesarCompararHora(const int, const int, const int) const;
-
-		protected:
 	};
 
-	// Asignar Atributo
+	//-------------------------
+	// Asignar Atributo Publico
+	//-------------------------
+
 	inline void Hora::AsignarHH(const int hh) 
 	{
 		this->hh = hh;
@@ -54,13 +79,16 @@
 	{
 		this->mi = mi;
 	}
-	
+
 	inline void Hora::AsignarSS(const int ss)
 	{
 		this->ss = ss;
 	}
 
-	// Obtener Atributo
+	//-------------------------
+	// Obtener Atributo Publico
+	//-------------------------
+
 	inline int Hora::ObtenerHH() const
 	{
     	return this->hh;

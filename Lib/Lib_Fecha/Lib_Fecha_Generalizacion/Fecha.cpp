@@ -4,22 +4,10 @@
 
 using namespace std;
 
-// Constructor
-Fecha::Fecha()
-{}
+//-----------------
+// Servicio Privado
+//-----------------
 
-Fecha::Fecha(const int dd, const int mm, const int aaaa)
-{
-    this->dd = dd;
-    this->mm = mm;
-    this->aaaa = aaaa;
-}
-
-// Destructor
-Fecha::~Fecha()
-{}
-
-// Servicio Interno
 int Fecha::ProcesarCompararFecha(const int dd, const int mm, const int aaaa) const
 {
     if (this->aaaa < aaaa)
@@ -55,7 +43,31 @@ int Fecha::ProcesarCompararFecha(const int dd, const int mm, const int aaaa) con
     return 0;
 }
 
-// Servicio
+//--------------------
+// Constructor Publico
+//--------------------
+
+Fecha::Fecha()
+{}
+
+Fecha::Fecha(const int dd, const int mm, const int aaaa)
+{
+    this->dd = dd;
+    this->mm = mm;
+    this->aaaa = aaaa;
+}
+
+//-------------------
+// Destructor Publico
+//-------------------
+
+Fecha::~Fecha()
+{}
+
+//-----------------
+// Servicio Publico
+//-----------------
+
 int Fecha::CompararFecha(const int dd, const int mm, const int aaaa) const
 {
     return this->ProcesarCompararFecha(dd, mm, aaaa);
@@ -109,7 +121,7 @@ int Fecha::ValidarFecha() const
             }
 
             break;
-        
+
 		case 2:
             if ((this->aaaa % 4) != 0)
             {
@@ -156,8 +168,8 @@ void Fecha::MostrarFecha() const
 void Fecha::MostrarFecha(const string mensaje) const
 {
     cout << mensaje << endl << flush;
+
     cout << "Fecha: " << this->dd << "/" << this->mm << "/" << this->aaaa << endl << flush;
 
     return;
 }
-

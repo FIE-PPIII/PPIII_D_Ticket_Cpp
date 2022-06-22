@@ -6,50 +6,25 @@
 
 using namespace std;
 
-// Constructor
-Ticket::Ticket()
-{}
+//-----------------
+// Servicio Privado
+//-----------------
 
-Ticket::Ticket(const string datos)
-{
-	this->datos = datos;
-	
-	this->ParsearDatos();
-}
-
-// Destructor
-Ticket::~Ticket()
-{}
-
-// Servicio Interno
 void Ticket::ParsearDatos()
 {
-	int dd;
-	int mm;
-	int aaaa;
-	int hh;
-	int mi;
-	int ss;
-	string strNRO(this->ObtenerDatos().substr(0, 10));
-	string strDD(this->ObtenerDatos().substr(10, 2));
-	string strMM(this->ObtenerDatos().substr(12, 2));
-	string strAAAA(this->ObtenerDatos().substr(14, 4));
-	string strHH(this->ObtenerDatos().substr(18, 2));
-	string strMI(this->ObtenerDatos().substr(20, 2));
-	string strSS(this->ObtenerDatos().substr(22, 2));
-	
-	dd = atoi(strDD.c_str());
-	mm = atoi(strMM.c_str());
-	aaaa = atoi(strAAAA.c_str());
+	this->nro = this->ObtenerDatos().substr(0, 10);
 
-	this->nro = strNRO;
+	int dd = atoi(this->ObtenerDatos().substr(10, 2).c_str());
+	int mm = atoi(this->ObtenerDatos().substr(12, 2).c_str());
+	int aaaa = atoi(this->ObtenerDatos().substr(14, 4).c_str());
+
 	this->ObtenerFecha().AsignarDD(dd);
 	this->ObtenerFecha().AsignarMM(mm);
 	this->ObtenerFecha().AsignarAAAA(aaaa);
 
-	hh = atoi(strHH.c_str());
-	mi = atoi(strMI.c_str());
-	ss = atoi(strSS.c_str());
+	int hh = atoi(this->ObtenerDatos().substr(18, 2).c_str());
+	int mi = atoi(this->ObtenerDatos().substr(20, 2).c_str());
+	int ss = atoi(this->ObtenerDatos().substr(22, 2).c_str());
 
 	this->ObtenerHora().AsignarHH(hh);
 	this->ObtenerHora().AsignarMI(mi);
@@ -58,11 +33,35 @@ void Ticket::ParsearDatos()
 	return;
 }
 
-// Servicio
+//--------------------
+// Constructor Publico
+//--------------------
+
+Ticket::Ticket()
+{}
+
+Ticket::Ticket(const string datos)
+{
+	this->datos = datos;
+
+	this->ParsearDatos();
+}
+
+//-------------------
+// Destructor Publico
+//-------------------
+
+Ticket::~Ticket()
+{}
+
+//-----------------
+// Servicio Publico
+//-----------------
+
 int Ticket::ValidarDatos()
 {
 	int estado;
-    
+
 	estado = this->ObtenerFecha().ValidarFecha();
 
     if (estado == -1)
@@ -118,13 +117,14 @@ void Ticket::MostrarDatos()
 	cout << "Nro: " << this->ObtenerNro() << endl << flush;
 
 	this->ObtenerHora().MostrarHora();
-	
+
 	return;
 }
 
 void Ticket::MostrarDatos(const string mensaje)
 {
 	cout << mensaje << endl << flush;
+
 	cout << "Datos: " << this->ObtenerDatos() << endl << flush;
 	cout << "Nro: " << this->ObtenerNro() << endl << flush;
 
@@ -132,4 +132,3 @@ void Ticket::MostrarDatos(const string mensaje)
 
 	return;
 }
-

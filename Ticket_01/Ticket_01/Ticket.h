@@ -8,34 +8,61 @@
 
 	class Ticket
 	{
+		private:
+
+			//-------------
+			// Dato Privado
+			//-------------
+
+			string datos;
+			string nro;
+
+			//-----------------
+			// Servicio Privado
+			//-----------------
+
+			void ParsearDatos();
+
 		public:
-			// Constructor
+
+			//--------------------
+			// Constructor Publico
+			//--------------------
+
 			Ticket();
 			Ticket(const string);
-			
-			// Destructor
+
+			//-------------------
+			// Destructor Publico
+			//-------------------
+
 			~Ticket();
 
-			// Asignar Atributo
+			//-------------------------
+			// Asignar Atributo Publico
+			//-------------------------
+
 			void AsignarDatos(const string);
 
-			// Obtener Atributo
+			//-------------------------
+			// Obtener Atributo Publico
+			//-------------------------
+
 			string ObtenerDatos() const;
 			string ObtenerNro() const;
 
-			// Servicio
+			//-----------------
+			// Servicio Publico
+			//-----------------
+
 			void MostrarDatos() const;
 			void MostrarDatos(const string) const;
-
-		private:
-			string datos;
-			string nro;
-			
-			// Servicio Interno
-			void ParsearDatos();
 	};
 
-	// Asignar Atributo
+	//-------------------------
+	// Asignar Atributo Publico
+	//-------------------------
+
 	inline void Ticket::AsignarDatos(const string datos)
 	{
 		this->datos = datos;
@@ -45,7 +72,10 @@
 		return;
 	}
 
-	// Obtener Atributo
+	//-------------------------
+	// Obtener Atributo Publico
+	//-------------------------
+
 	inline string Ticket::ObtenerDatos() const
 	{
 		return(this->datos);

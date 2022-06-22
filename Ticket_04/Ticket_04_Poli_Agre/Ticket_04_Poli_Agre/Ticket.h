@@ -1,70 +1,99 @@
-
 #ifndef __TICKET_H__
 
 	#define __TICKET_H__
 
 	#include <string>
-	
-	#include "../../../Lib/Lib_Fecha/Lib_Fecha_Polimorfismo/Fecha.h"
+
+	#include "../../../Lib/Lib_Fecha/Lib_Fecha_Poli_Agre/Fecha.h"
 	#include "../../../Lib/Lib_Hora/Lib_Hora_Poli_Agre/Hora.h"
 
 	using namespace std;
 
 	class Ticket
 	{
+		private:
+
+			//-------------
+			// Dato Privado
+			//-------------
+
+			string datos;
+			string nro;
+			Fecha fecha;
+			Hora hora;
+
+			//-----------------
+			// Servicio Privado
+			//-----------------
+
+			void ParsearDatos();
+
 		public:
-			// Constructor
+
+			//--------------------
+			// Constructor Publico
+			//--------------------
+
 			Ticket();
 			Ticket(const string);
-			
-			// Destructor
+
+			//-------------------
+			// Destructor Publico
+			//-------------------
+
 			~Ticket();
 
-			// Asignar Atributo
+			//-------------------------
+			// Asignar Atributo Publico
+			//-------------------------
+
 			void AsignarDatos(const string);
 
-			// Obtener Atributo
+			//-------------------------
+			// Obtener Atributo Publico
+			//-------------------------
+
 			string ObtenerDatos() const;
 			string ObtenerNro() const;
 			Fecha & ObtenerFecha();
 			Hora & ObtenerHora();
 
-			// Servicio
-			virtual int Validar();
-			virtual void Mostrar();
-			virtual void Mostrar(const string);
+			//-----------------
+			// Servicio Publico
+			//-----------------
 
-		private:
-			string datos;
-			string nro;
-			Fecha fecha;
-			Hora hora;
-			
-			// Servicio Interno
-			void ParsearDatos();
+			int Validar();
+			void Mostrar();
+			void Mostrar(const string);
 	};
 
-	// Asignar Atributo
+	//-------------------------
+	// Asignar Atributo Publico
+	//-------------------------
+
 	inline void Ticket::AsignarDatos(const string datos)
 	{
 		this->datos = datos;
-		
+
 		this->ParsearDatos();
-	
+
 		return;
 	}
 
-	// Obtener Atributo
+	//-------------------------
+	// Obtener Atributo Publico
+	//-------------------------
+
 	inline string Ticket::ObtenerDatos() const
 	{
 		return(this->datos);
 	}
-	
+
 	inline string Ticket::ObtenerNro() const
 	{
 		return(this->nro);
 	}
-	
+
 	inline Fecha & Ticket::ObtenerFecha()
 	{
 		return(this->fecha);

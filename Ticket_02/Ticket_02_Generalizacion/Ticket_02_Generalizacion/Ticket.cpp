@@ -6,50 +6,54 @@
 
 using namespace std;
 
-// Constructor
+//-----------------
+// Servicio Privado
+//-----------------
+
+void Ticket::ParsearDatos()
+{
+	this->nro = this->ObtenerDatos().substr(0, 10);
+
+	int dd = atoi(this->ObtenerDatos().substr(10, 2).c_str());
+	int mm = atoi(this->ObtenerDatos().substr(12, 2).c_str());
+	int aaaa = atoi(this->ObtenerDatos().substr(14, 4).c_str());
+
+	Fecha::AsignarDD(dd);
+	Fecha::AsignarMM(mm);
+	Fecha::AsignarAAAA(aaaa);
+
+	return;
+}
+
+//--------------------
+// Constructor Publico
+//--------------------
+
 Ticket::Ticket()
 {}
 
 Ticket::Ticket(const string datos)
 {
 	this->datos = datos;
-	
+
 	this->ParsearDatos();
 }
 
-// Destructor
+//-------------------
+// Destructor Publico
+//-------------------
+
 Ticket::~Ticket()
 {}
 
-// Servicio Interno
-void Ticket::ParsearDatos()
-{
-	string strNRO(this->ObtenerDatos().substr(0, 10));
-	string strDD(this->ObtenerDatos().substr(10, 2));
-	string strMM(this->ObtenerDatos().substr(12, 2));
-	string strAAAA(this->ObtenerDatos().substr(14, 4));
+//-----------------
+// Servicio Publico
+//-----------------
 
-	int dd;
-	int mm;
-	int aaaa;
-
-	dd = atoi(strDD.c_str());
-	mm = atoi(strMM.c_str());
-	aaaa = atoi(strAAAA.c_str());
-
-	this->nro = strNRO;
-	this->ObtenerFecha()->AsignarDD(dd);
-	this->ObtenerFecha()->AsignarMM(mm);
-	this->ObtenerFecha()->AsignarAAAA(aaaa);
-
-	return;
-}
-
-// Servicio
 int Ticket::ValidarDatos()
 {
 	int estado;
-    
+
 	estado = this->ObtenerFecha()->ValidarFecha();
 
     if (estado == -1)
@@ -80,8 +84,8 @@ void Ticket::MostrarDatos()
 {
 	cout << "Datos: " << this->ObtenerDatos() << endl << flush;
 	cout << "Nro: " << this->ObtenerNro() << endl << flush;
-	
-	this->ObtenerFecha()->MostrarFecha();
+
+	Fecha::MostrarFecha();
 
 	return;
 }
@@ -89,11 +93,11 @@ void Ticket::MostrarDatos()
 void Ticket::MostrarDatos(const string mensaje)
 {
 	cout << mensaje << endl << flush;
+
 	cout << "Datos: " << this->ObtenerDatos() << endl << flush;
 	cout << "Nro: " << this->ObtenerNro() << endl << flush;
-	
-	this->ObtenerFecha()->MostrarFecha();
+
+	Fecha::MostrarFecha();
 
 	return;
 }
-

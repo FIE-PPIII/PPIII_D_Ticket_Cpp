@@ -1,50 +1,75 @@
 #ifndef __FECHA_H__
 
 	#define __FECHA_H__
-	
+
 	#include <string>
-	
+
 	using namespace std;
 
 	class Fecha
 	{
+		private:
+
+			//-------------
+			// Dato Privado
+			//-------------
+
+			int dd;
+    		int mm;
+    		int aaaa;
+
+			//-----------------
+			// Servicio Privado
+			//-----------------
+
+    		int ProcesarCompararFecha(const int, const int, const int) const;
+
 		public:
-			// Constructor
+
+			//--------------------
+			// Constructor Publico
+			//--------------------
+
 			Fecha();
 			Fecha(const int, const int, const int);
-			
-			// Destructor
+
+			//-------------------
+			// Destructor Publico
+			//-------------------
+
 			virtual ~Fecha();
-			
-			// Asignar Atributo
+
+			//-------------------------
+			// Asignar Atributo Publico
+			//-------------------------
+
 			void AsignarDD(const int);
 			void AsignarMM(const int);
 			void AsignarAAAA(const int);
-			
-			// Obtener Atributo
+
+			//-------------------------
+			// Obtener Atributo Publico
+			//-------------------------
+
 			int ObtenerDD() const;
 			int ObtenerMM() const;
 			int ObtenerAAAA() const;
-		
-			// Servicio
+
+			//-----------------
+			// Servicio Publico
+			//-----------------
+
 			int CompararFecha(const int, const int, const int) const;
 			int CompararFecha(const Fecha) const;
 			int ValidarFecha() const;
 			void MostrarFecha() const;
 			void MostrarFecha(const string) const;
-			
-		private:
-			int dd;
-    		int mm;
-    		int aaaa;
-
-			// Servicio Interno
-    		int ProcesarCompararFecha(const int, const int, const int) const;
-		
-		protected:
 	};
 
-	// Asignar Atributo
+	//-------------------------
+	// Asignar Atributo Publico
+	//-------------------------
+
 	inline void Fecha::AsignarDD(const int dd) 
 	{
 		this->dd = dd;
@@ -54,13 +79,16 @@
 	{
 		this->mm = mm;
 	}
-	
+
 	inline void Fecha::AsignarAAAA(const int aaaa)
 	{
 		this->aaaa = aaaa; 
 	}
 
-	// Obtener Atributo
+	//-------------------------
+	// Obtener Atributo Publico
+	//-------------------------
+
 	inline int Fecha::ObtenerDD() const
 	{
     	return this->dd; 

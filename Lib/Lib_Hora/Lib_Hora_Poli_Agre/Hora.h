@@ -1,50 +1,75 @@
 #ifndef __HORA_H__
 
 	#define __HORA_H__
-	
+
 	#include <string>
 
 	using namespace std;
-	
+
 	class Hora
 	{
-		public:
-			// Constructor
-			Hora();
-			Hora(const int, const int, const int);
-			
-			// Destructor
-			~Hora();
-			
-			// Asignar Atributo
-			void AsignarHH(const int);
-			void AsignarMI(const int);
-			void AsignarSS(const int);
-			
-			// Obtener Atributo
-			int ObtenerHH() const;
-			int ObtenerMI() const;
-			int ObtenerSS() const;
-		
-			// Servicio
-			int CompararHora(const int, const int, const int) const;
-			int CompararHora(const Hora) const;
-			virtual int Validar() const;
-			virtual void Mostrar() const;
-			virtual void Mostrar(const string) const;
-		
 		private:
+
+			//-------------
+			// Dato Privado
+			//-------------
+
 			int hh;
     		int mi;
     		int ss;
 
-			// Servicio Interno
+			//-----------------
+			// Servicio Privado
+			//-----------------
+
     		int ProcesarCompararHora(const int, const int, const int) const;
 
-		protected:
+		public:
+
+			//--------------------
+			// Constructor Publico
+			//--------------------
+
+			Hora();
+			Hora(const int, const int, const int);
+
+			//-------------------
+			// Destructor Publico
+			//-------------------
+
+			~Hora();
+
+			//-------------------------
+			// Asignar Atributo Publico
+			//-------------------------
+
+			void AsignarHH(const int);
+			void AsignarMI(const int);
+			void AsignarSS(const int);
+
+			//-------------------------
+			// Obtener Atributo Publico
+			//-------------------------
+
+			int ObtenerHH() const;
+			int ObtenerMI() const;
+			int ObtenerSS() const;
+
+			//-----------------
+			// Servicio Publico
+			//-----------------
+
+			int CompararHora(const int, const int, const int) const;
+			int CompararHora(const Hora) const;
+			int Validar() const;
+			void Mostrar() const;
+			void Mostrar(const string) const;
 	};
 
-	// Asignar Atributo
+	//-------------------------
+	// Asignar Atributo Publico
+	//-------------------------
+
 	inline void Hora::AsignarHH(const int hh) 
 	{
 		this->hh = hh;
@@ -54,13 +79,16 @@
 	{
 		this->mi = mi;
 	}
-	
+
 	inline void Hora::AsignarSS(const int ss)
 	{
 		this->ss = ss;
 	}
 
-	// Obtener Atributo
+	//-------------------------
+	// Obtener Atributo Publico
+	//-------------------------
+
 	inline int Hora::ObtenerHH() const
 	{
     	return this->hh;

@@ -4,7 +4,21 @@
 
 using namespace std;
 
-// Constructor
+//-----------------
+// Servicio Privado
+//-----------------
+
+void Ticket::ParsearDatos()
+{
+	this->nro = this->ObtenerDatos().substr(0, 10);
+
+	return;
+}
+
+//--------------------
+// Constructor Publico
+//--------------------
+
 Ticket::Ticket()
 {}
 
@@ -15,21 +29,17 @@ Ticket::Ticket(const string datos)
 	this->ParsearDatos();
 }
 
-// Destructor
+//-------------------
+// Destructor Publico
+//-------------------
+
 Ticket::~Ticket()
 {}
 
-// Servicio Interno
-void Ticket::ParsearDatos()
-{
-	string strNRO(this->ObtenerDatos().substr(0, 10));
+//-----------------
+// Servicio Publico
+//-----------------
 
-	this->nro = strNRO;
-
-	return;
-}
-
-// Servicio
 void Ticket::MostrarDatos() const
 {
 	cout << "Datos: " << this->ObtenerDatos() << endl << flush;
@@ -41,6 +51,7 @@ void Ticket::MostrarDatos() const
 void Ticket::MostrarDatos(const string mensaje) const
 {
 	cout << mensaje << endl << flush;
+
 	cout << "Datos: " << this->ObtenerDatos() << endl << flush;
 	cout << "Nro: " << this->ObtenerNro() << endl << flush;
 
